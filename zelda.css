@@ -84,7 +84,6 @@ body * {
 .inventory-nav{
     background-color:limegreen;
     height: 80px;
-
 }
 
 .title{
@@ -96,10 +95,78 @@ body * {
     padding-top:10px
 }
 
-.right{
-    background-color: rgb(207, 135, 1);
+.links{
+    padding-left: 129px;
+    padding-top: 5px;
+    padding-right: 95px;
+    display: flex;
+    justify-content: space-between;
 }
 
+.link{
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    background: white;
+    
+}
+
+.items{
+    display: grid;
+    grid-template-columns: repeat(5,72px);
+    grid-template-rows: repeat(4,72px);
+    grid-gap: 10px;
+    padding-left: 90px;
+    padding-top:15px
+}
+
+.item{
+    
+    background: black;
+}
+
+/* ------------------Right---------------------- */
+
+.right{
+    background-color: rgb(207, 135, 1);
+    display: grid;
+    position: relative;
+    grid-template-rows: 150px 1fr 170px;
+    grid-template-areas: 
+    "conditions"
+    "none"
+    "stats";
+}
+
+.conditions{
+    background: purple;
+    grid-area: "conditions";
+}
+
+.preview{
+    background-image: url(./assets/img/link-preview.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top:-75px;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+.stats{
+background: green;
+grid-area: stats;
+margin:10px ;
+border:1px solid white ;
+padding:12 px 20px ;
+margin-bottom: 20px ;
+}
+
+.Item-name{
+    padding-left:14px;
+    color: white;
+}
 
 .bottom{
 background-color: rgb(21, 11, 214);
