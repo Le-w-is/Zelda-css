@@ -1,101 +1,103 @@
-video{
+video {
     position: absolute;
     height: 600px;
     z-index: 10;
     pointer-events: none;
-    opacity: .3;
+    opacity: 0;
 }
 
 body {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
 
 body * {
     box-sizing: border-box;
 }
 
-.container{
+.container {
     display: grid;
     grid-template-columns: 550px 1fr;
     grid-template-rows: 82px 1fr 58px;
     position: absolute;
-    top:0;
-    right:0;
-    bottom:0;
-    left:0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     border: 5px solid red;
 }
 
 /* ------------------------Top------------------------- */
-.top{
+.top {
     background-color: blueviolet;
     grid-column-end: span 2;
-    color:#fff;
+    color: #fff;
     display: grid;
     grid-template-columns: 225px 1fr 150px 1fr 225px;
 }
 
 .hearts {
     background: yellow;
-    padding-top:20px;
-    padding-left:44px;
+    padding-top: 20px;
+    padding-left: 44px;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
 }
-.heart{
+
+.heart {
     background: red;
-    width:15px;
+    width: 15px;
     height: 12px;
     margin-bottom: 4px;
-    margin-right:1px;
+    margin-right: 1px;
 }
 
-.left-button{
+.left-button {
     align-self: end;
     justify-self: end;
     margin-bottom: 20px;
     margin-right: 6px;
 }
 
-.right-button{
+.right-button {
     align-self: end;
     margin-bottom: 20px;
     margin-left: 32px;
 }
-.location{
-    align-self:center;
+
+.location {
+    align-self: center;
     margin-left: 50px;
     margin-bottom: 15px;
 }
 
-.rupees{
-    align-self:center;
+.rupees {
+    align-self: center;
     justify-self: end;
-    margin-right:40px 
+    margin-right: 40px
 }
 
 /*------------------------ Left------------------------- */
-.left{
+.left {
     background-color: rgb(43, 226, 61);
 }
 
-.inventory-nav{
-    background-color:limegreen;
+.inventory-nav {
+    background-color: limegreen;
     height: 80px;
 }
 
-.title{
+.title {
     text-align: center;
-    color:#fff;
+    color: #fff;
     background: green;
     height: 30px;
     padding-left: 27px;
-    padding-top:10px
+    padding-top: 10px
 }
 
-.links{
+.links {
     padding-left: 129px;
     padding-top: 5px;
     padding-right: 95px;
@@ -103,72 +105,93 @@ body * {
     justify-content: space-between;
 }
 
-.link{
+.link {
     display: inline-block;
     height: 32px;
     width: 32px;
     background: white;
-    
+
 }
 
-.items{
+.items {
     display: grid;
-    grid-template-columns: repeat(5,72px);
-    grid-template-rows: repeat(4,72px);
+    grid-template-columns: repeat(5, 72px);
+    grid-template-rows: repeat(4, 72px);
     grid-gap: 10px;
     padding-left: 90px;
-    padding-top:15px
+    padding-top: 15px
 }
 
-.item{
-    
+.item {
+
     background: black;
 }
 
 /* ------------------Right---------------------- */
 
-.right{
+.right {
     background-color: rgb(207, 135, 1);
     display: grid;
     position: relative;
     grid-template-rows: 150px 1fr 170px;
-    grid-template-areas: 
-    "conditions"
-    "none"
-    "stats";
+    grid-template-areas:
+        "conditions"
+        "none"
+        "stats";
 }
 
-.conditions{
+.conditions {
     background: purple;
     grid-area: "conditions";
 }
 
-.preview{
+.preview {
     background-image: url(./assets/img/link-preview.png);
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    top:-75px;
-    left:0;
-    right:0;
-    bottom:0;
+    top: -75px;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
-.stats{
-background: green;
-grid-area: stats;
-margin:10px ;
-border:1px solid white ;
-padding:12 px 20px ;
-margin-bottom: 20px ;
+.stats {
+    background: green;
+    grid-area: stats;
+    margin: 10px;
+    border: 1px solid white;
+    padding: 2px 20px;
+    margin-bottom: 20px;
+    z-index: 5;
+    opacity: .7;
 }
 
-.Item-name{
-    padding-left:14px;
+.info {
+    height: 25px;
+    background: orange;
+}
+
+.Item-name {
+    height: 30px;
+    padding-left: 14px;
     color: white;
 }
 
-.bottom{
-background-color: rgb(21, 11, 214);
-grid-column-end: span 2;
+/* --------------bottom------------------------------- */
+
+.bottom {
+    background-color: black;
+    grid-column-end: span 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 15px;
+    padding-bottom:10px;
+}
+
+.actions {
+    color: white;
+    display: inline-block;
+    width:95px;
 }
