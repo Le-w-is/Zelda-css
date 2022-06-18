@@ -18,7 +18,7 @@ body * {
 .container{
     display: grid;
     grid-template-columns: 550px 1fr;
-    grid-template-rows: 86px 1fr 58px;
+    grid-template-rows: 82px 1fr 58px;
     position: absolute;
     top:0;
     right:0;
@@ -27,18 +27,79 @@ body * {
     border: 5px solid red;
 }
 
+/* ------------------------Top------------------------- */
 .top{
     background-color: blueviolet;
     grid-column-end: span 2;
+    color:#fff;
+    display: grid;
+    grid-template-columns: 225px 1fr 150px 1fr 225px;
+}
+
+.hearts {
+    background: yellow;
+    padding-top:20px;
+    padding-left:44px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.heart{
+    background: red;
+    width:15px;
+    height: 12px;
+    margin-bottom: 4px;
+    margin-right:1px;
+}
+
+.left-button{
+    align-self: end;
+    justify-self: end;
+    margin-bottom: 20px;
+    margin-right: 6px;
+}
+
+.right-button{
+    align-self: end;
+    margin-bottom: 20px;
+    margin-left: 32px;
+}
+.location{
+    align-self:center;
+    margin-left: 50px;
+    margin-bottom: 15px;
+}
+
+.rupees{
+    align-self:center;
+    justify-self: end;
+    margin-right:40px 
+}
+
+/*------------------------ Left------------------------- */
+.left{
+    background-color: rgb(43, 226, 61);
+}
+
+.inventory-nav{
+    background-color:limegreen;
+    height: 80px;
+
+}
+
+.title{
+    text-align: center;
+    color:#fff;
+    background: green;
+    height: 30px;
+    padding-left: 27px;
+    padding-top:10px
 }
 
 .right{
-background-color: rgb(43, 226, 61);
+    background-color: rgb(207, 135, 1);
 }
 
-.left{
-background-color: rgb(207, 135, 1);
-}
 
 .bottom{
 background-color: rgb(21, 11, 214);
